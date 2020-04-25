@@ -36,6 +36,16 @@
             <!-- inserimento logo HTML5, alt è il testo alternativo che deve essere visualizzato nel caso in cui il browser non supporti l'immagine -->
             <img src="./Assets/HTML5.png" alt="Valid HTML 5" width="50px">
         </a> <!-- dimensioni sarebbero da evitare... usare invece i CSS -->
+        <img src="http://security.polito.it/img/polito.gif" alt="Logo del Politecnico" usemap="#logomap" width="50" height="50">
+        <map name="logomap">
+            <!--Le coordinate (x1,y1,x2,y2) dell'attributo "coords" si riferiscono agli angoli in alto a sinistra e in basso a destra dell'area che vogliamo prendere in considerazione,
+              per cui considerando il 100% dell'immagine, e dovendola dividere a met�,
+              Prima met� (sito del politecnico) -> x1=0, x2=100 (in orizzontale prendiamo tutta l'immagine), y1=0, y2=50 (in verticale la dividiamo a met�)
+              Seconda met� (sito del comune) -> x1=0, x2=100, y1=50, y2=100 (prendiamo la seconda met� da 50 a 100 in verticale)
+              -->
+            <area shape="rect" coords="0,0,50,25" href="http://www.polito.it" alt="link al sito del politecnico">
+            <area shape="rect" coords="0,25,50,50" href="http://www.comune.torino.it" alt="link al sito del comune">
+        </map>
     </p>
 </footer>
 </body>
