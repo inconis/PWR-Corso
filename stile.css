@@ -1,0 +1,19 @@
+/* Regole valide per la pagina intera*/
+
+body{font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.1;
+background-color: black;
+color:white;}
+/* Colore dei link*/
+a{color:lightblue;}
+/* Regole valide nella tabella per colorare i voti*/
+/* Questo é errato perché anche i nomi degli esami risulterebbero centrati
+td{text-align: center}
+*/
+td.alto{color:green;text-align: center}
+td.basso{color:red;text-align: center}
+/* Regole valide per il footer*/
+footer{font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 90%;}
+footer img{width: 10vh}
