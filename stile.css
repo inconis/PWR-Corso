@@ -50,16 +50,41 @@ p.citazione::after {content: ' \00A9';}
 /* regole per il layout
 La proprietà clear serve a impedire che al fianco di un elemento compaiano altri elementi con il float
 La proprietà float serve a rimuovere un elemento dal normale flusso del documento e spostarlo su uno dei lati*/
-.theheader{clear: both;text-align: center;border: 0.2em solid red;min-width: 30em;}
+.theheader{grid-area: header;
+    clear: both;
+    text-align: center;
+    border: 0.2em solid red;
+    min-width: 30em;}
 
-.themenu{float:left;}
-.thecontent{float:right; min-width: 30em;}
-.thefooter{clear:both;
+.themenu{grid-area: menu;
+    float:left;}
+.thecontent{grid-area: contenuto;
+    float:right; min-width: 30em;}
+.thefooter{grid-area: footer;
+    clear:both;
     border-top:0.3em solid blue;
+    }
+/*Struttura generica (Si useranno solo pet schermi piccoli)*/
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    "header"
+    "menu"
+    "contenuto"
+    "footer";
+
+}
+@media (min-width: 800px){
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+        "header header"
+        "menu contenuto"
+        "footer footer";
+
 
     }
-
-
+}
 
 
 
