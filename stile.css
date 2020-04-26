@@ -88,9 +88,26 @@ La proprietà float serve a rimuovere un elemento dal normale flusso del documen
 
 
 
+
+
 /* Regole valide per il footer*/
 footer{font-family: "Times New Roman", Times, serif;
     font-style: italic;
     font-size: 90%;}
 footer img{width: 10vh}
 
+/* Regole per la stampa */
+@media print{
+    main {font-family: "Times New Roman", Times, serif;
+        font-style: italic;
+    font-size: 13pt;}
+    a{text-decoration:underline;
+    color:blue;}
+    a:after{content: " (" attr(href) ") ";}
+    .themenu{display: none}
+    footer{font-family: "Times New Roman", Times, serif;
+        font-style: italic;
+        font-size: 90%;}
+
+
+}
