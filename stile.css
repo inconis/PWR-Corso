@@ -23,7 +23,10 @@ h2::before{
     content: counter(contatore) ". "}
 
 /* Colore dei link*/
-a{color:lightblue;}
+a:link{color:lightblue;}
+a:visited{color:lightblue;}
+a:hover{color:orange;background-color: aquamarine}
+a:active{background-color: red}
 
 
 /* Regole valide nella tabella per la prima lettera dei paragrafi*/
