@@ -47,9 +47,25 @@ td.basso{color:red;text-align: center}
 p.citazione{font-style:italic; text-align: center;}
 p.citazione::after {content: ' \00A9';}
 
+/* regole per il layout
+La proprietà clear serve a impedire che al fianco di un elemento compaiano altri elementi con il float
+La proprietà float serve a rimuovere un elemento dal normale flusso del documento e spostarlo su uno dei lati*/
+.theheader{clear: both;text-align: center;border: 0.2em solid red;min-width: 30em;}
+
+.themenu{float:left;}
+.thecontent{float:right; min-width: 30em;}
+.thefooter{clear:both;
+    border-top:0.3em solid blue;
+
+    }
+
+
+
+
 
 /* Regole valide per il footer*/
 footer{font-family: "Times New Roman", Times, serif;
     font-style: italic;
     font-size: 90%;}
 footer img{width: 10vh}
+
