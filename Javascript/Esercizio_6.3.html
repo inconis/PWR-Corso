@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calcolatrice</title>
+</head>
+<body>
+<script type="text/javascript">
+    var cost=2;
+    var vettore =new Array(cost);
+    var numero1
+    for(var i=0;i<cost;i++)
+    {
+        do {
+        var input=window.prompt("Inserisci numero " + (i + 1), "");
+        if(!input)window.alert("Campo vuoto");
+        if(!isFinite(input))window.alert("Numero non valido");
+             }while(!isFinite(input))
+
+        vettore[i]=input;
+    };
+    window.alert("Somma= "+(parseInt(vettore[0])+parseInt(vettore[1])));
+    window.alert("Differenza= "+(parseInt(vettore[0])-parseInt(vettore[1])));
+    document.writeln("<p> Terminato </p>");
+
+</script>
+</body>
+</html>

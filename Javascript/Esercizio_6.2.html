@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina con JavaScript</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    do {
+        var input = window.prompt("Numero?", "");
+        var n = parseInt(input);
+        if(!input)window.alert("Campo vuoto");
+        if(!isFinite(n))window.alert("Numero non valido");
+    }while(!isFinite(n));
+
+
+    var resto= n%2;
+    document.writeln("<p> Hai digitato il valore "+n +" ed è un numero ");
+    if(resto===0){document.writeln("pari <p>")}
+    else{ document.writeln("dispari <p>")};
+</script>
+
+<script type="text/javascript">
+    window.alert("Pagina caricata")
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calcolatrice</title>
+</head>
+<body>
+<script type="text/javascript">
+    do {
+        var input = window.prompt("Numero?", "");
+
+        if(!input)window.alert("Campo vuoto");
+        if(!isFinite(input))window.alert("Numero non valido");
+    }while(!isFinite(input));
+    var n = parseInt(input);
+
+    document.writeln("<table>");
+    document.writeln("<tr><th>Numero</th><th>Quadrato</th><th>Cubo</th></tr>");
+    for(var i=1;i<=n;i++){
+        document.writeln("<tr><td>"+i+"</td><td>"+(i*i)+"</td><td>"+(i*i*i)+"</td></tr>");
+
+
+    };
+    document.writeln("</table>");
+</script>
+</body>
+</html>
