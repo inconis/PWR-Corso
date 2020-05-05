@@ -1,31 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Calcolatrice</title>
-</head>
-<body>
-<script type="text/javascript">
+<!doctype html>
+<html lang="it">
+  <head>
+    <title>Esercizio 6.9a</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Paolo Rossi" >
+    <link rel=stylesheet href=es6.css>
+    <script type="text/javascript">
+     "use strict";
 
-    do {
-        var input = window.prompt("Nome ?", "");
+      var nome = "";
 
-        if (!input || /^\s*$/.test(input)) {
-            window.alert("Campo vuoto");
-        } else break;
-    }while(1===1);
-    input=input.toUpperCase();
-    var funzione = "onclick='"+"window.alert ( 'Salve,sono qui ai tuoi ordini!')"+"'";
+      function showMessage(nome) {
+        window.alert("Salve "+nome+", sono qui ai tuoi ordini!");
+      }
 
-    document.writeln("<p>Benvenuto </p>");
-    document.writeln("<p"+ funzione +"></p></pp> testo </p>")
-    document.writeln("<p> nel mio umile sito</p>");
+      function benvenuto() {
+        nome = window.prompt("Come ti chiami?", "");
+        nome = nome.toUpperCase();
+        document.writeln("Benvenuto <span onclick=\"showMessage(nome)\">"+nome+"</span> nel mio umile sito!");
+      }
+    </script>
+  </head>
 
+  <body>
+    <h1> Esercizio 6.9a</h1>
 
+    <script type="text/javascript">
+      "use strict";
+      benvenuto();
+    </script>
 
-
-
-
-</script>
-</body>
+  </body>
 </html>
